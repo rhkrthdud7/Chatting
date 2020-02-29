@@ -10,7 +10,8 @@ import RIBs
 import RxSwift
 
 protocol RootRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func routeToSplash()
+    func routeToLoggedOut()
 }
 
 protocol RootPresentable: Presentable {
@@ -26,6 +27,7 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
 
     weak var router: RootRouting?
     weak var listener: RootListener?
+    var isFirstTimeLaunch: Bool = false
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
@@ -42,5 +44,18 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+    
+    func viewDidAppear() {
+        if !isFirstTimeLaunch {
+            isFirstTimeLaunch = true
+            
+            router?.routeToSplash()
+        }
+    }
+    
+    // MARK: - SplashListener
+    func didFinishSplashing() {
+        router?.routeToLoggedOut()
     }
 }

@@ -16,6 +16,16 @@
 		9C8D401E240AAED60007E71F /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D401A240AAED60007E71F /* RootBuilder.swift */; };
 		9C8D401F240AAED60007E71F /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D401B240AAED60007E71F /* RootInteractor.swift */; };
 		9C8D4021240AB00C0007E71F /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D4020240AB00C0007E71F /* AppComponent.swift */; };
+		9C8D4038240AB65A0007E71F /* RootComponent+LoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D4037240AB65A0007E71F /* RootComponent+LoggedOut.swift */; };
+		9C8D403E240AB6640007E71F /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D403A240AB6640007E71F /* LoggedOutViewController.swift */; };
+		9C8D403F240AB6640007E71F /* LoggedOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D403B240AB6640007E71F /* LoggedOutInteractor.swift */; };
+		9C8D4040240AB6640007E71F /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D403C240AB6640007E71F /* LoggedOutBuilder.swift */; };
+		9C8D4041240AB6640007E71F /* LoggedOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D403D240AB6640007E71F /* LoggedOutRouter.swift */; };
+		9C8D4047240ABD650007E71F /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D4043240ABD650007E71F /* SplashRouter.swift */; };
+		9C8D4048240ABD650007E71F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D4044240ABD650007E71F /* SplashViewController.swift */; };
+		9C8D4049240ABD650007E71F /* SplashBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D4045240ABD650007E71F /* SplashBuilder.swift */; };
+		9C8D404A240ABD650007E71F /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D4046240ABD650007E71F /* SplashInteractor.swift */; };
+		9C8D404C240AC07D0007E71F /* RootComponent+Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D404B240AC07D0007E71F /* RootComponent+Splash.swift */; };
 		C47F33EE66A02C949377CF0A /* Pods_Chatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823826335213672E9B5F575A /* Pods_Chatting.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +43,16 @@
 		9C8D401A240AAED60007E71F /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
 		9C8D401B240AAED60007E71F /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 		9C8D4020240AB00C0007E71F /* AppComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		9C8D4037240AB65A0007E71F /* RootComponent+LoggedOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedOut.swift"; sourceTree = "<group>"; };
+		9C8D403A240AB6640007E71F /* LoggedOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
+		9C8D403B240AB6640007E71F /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
+		9C8D403C240AB6640007E71F /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
+		9C8D403D240AB6640007E71F /* LoggedOutRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedOutRouter.swift; sourceTree = "<group>"; };
+		9C8D4043240ABD650007E71F /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		9C8D4044240ABD650007E71F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		9C8D4045240ABD650007E71F /* SplashBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBuilder.swift; sourceTree = "<group>"; };
+		9C8D4046240ABD650007E71F /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		9C8D404B240AC07D0007E71F /* RootComponent+Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+Splash.swift"; sourceTree = "<group>"; };
 		DF9C7FD840033620270263AD /* Pods-Chatting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting.release.xcconfig"; path = "Target Support Files/Pods-Chatting/Pods-Chatting.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +119,8 @@
 			children = (
 				9C8D402B240AB23E0007E71F /* App */,
 				9C8D4016240AAEBC0007E71F /* Root */,
+				9C8D4042240ABD550007E71F /* Splash */,
+				9C8D4039240AB6640007E71F /* LoggedOut */,
 			);
 			path = RIBs;
 			sourceTree = "<group>";
@@ -110,6 +132,8 @@
 				9C8D401B240AAED60007E71F /* RootInteractor.swift */,
 				9C8D4018240AAED60007E71F /* RootRouter.swift */,
 				9C8D4019240AAED60007E71F /* RootViewController.swift */,
+				9C8D404B240AC07D0007E71F /* RootComponent+Splash.swift */,
+				9C8D4037240AB65A0007E71F /* RootComponent+LoggedOut.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -122,6 +146,28 @@
 				9C8D4020240AB00C0007E71F /* AppComponent.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		9C8D4039240AB6640007E71F /* LoggedOut */ = {
+			isa = PBXGroup;
+			children = (
+				9C8D403C240AB6640007E71F /* LoggedOutBuilder.swift */,
+				9C8D403B240AB6640007E71F /* LoggedOutInteractor.swift */,
+				9C8D403D240AB6640007E71F /* LoggedOutRouter.swift */,
+				9C8D403A240AB6640007E71F /* LoggedOutViewController.swift */,
+			);
+			path = LoggedOut;
+			sourceTree = "<group>";
+		};
+		9C8D4042240ABD550007E71F /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				9C8D4045240ABD650007E71F /* SplashBuilder.swift */,
+				9C8D4046240ABD650007E71F /* SplashInteractor.swift */,
+				9C8D4043240ABD650007E71F /* SplashRouter.swift */,
+				9C8D4044240ABD650007E71F /* SplashViewController.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,11 +296,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C8D401D240AAED60007E71F /* RootViewController.swift in Sources */,
+				9C8D4040240AB6640007E71F /* LoggedOutBuilder.swift in Sources */,
+				9C8D4047240ABD650007E71F /* SplashRouter.swift in Sources */,
 				9C8D4021240AB00C0007E71F /* AppComponent.swift in Sources */,
 				9C8D401C240AAED60007E71F /* RootRouter.swift in Sources */,
+				9C8D4048240ABD650007E71F /* SplashViewController.swift in Sources */,
 				9C8D401F240AAED60007E71F /* RootInteractor.swift in Sources */,
+				9C8D404A240ABD650007E71F /* SplashInteractor.swift in Sources */,
+				9C8D4038240AB65A0007E71F /* RootComponent+LoggedOut.swift in Sources */,
+				9C8D4049240ABD650007E71F /* SplashBuilder.swift in Sources */,
 				9C8D3FF9240AAAE60007E71F /* AppDelegate.swift in Sources */,
+				9C8D4041240AB6640007E71F /* LoggedOutRouter.swift in Sources */,
 				9C8D3FFB240AAAE60007E71F /* SceneDelegate.swift in Sources */,
+				9C8D404C240AC07D0007E71F /* RootComponent+Splash.swift in Sources */,
+				9C8D403F240AB6640007E71F /* LoggedOutInteractor.swift in Sources */,
+				9C8D403E240AB6640007E71F /* LoggedOutViewController.swift in Sources */,
 				9C8D401E240AAED60007E71F /* RootBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

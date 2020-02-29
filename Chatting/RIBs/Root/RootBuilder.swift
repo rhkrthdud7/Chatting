@@ -38,10 +38,14 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
 
     func build() -> LaunchRouting {
         let viewController = RootViewController()
-        let component = RootComponent(dependency: dependency, rootViewController: viewController)
+        let component = RootComponent(dependency: dependency,
+                                      rootViewController: viewController)
         let interactor = RootInteractor(presenter: viewController)
-        
+        let splashBuilder = SplashBuilder(dependency: component)
+        let loggedOutBuilder = LoggedOutBuilder(dependency: component)
         return RootRouter(interactor: interactor,
-                          viewController: viewController)
+                          viewController: viewController,
+                          splashBuilder: splashBuilder,
+                          loggedOutBuilder: loggedOutBuilder)
     }
 }
