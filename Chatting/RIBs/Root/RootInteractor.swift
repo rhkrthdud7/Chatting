@@ -12,6 +12,7 @@ import RxSwift
 protocol RootRouting: ViewableRouting {
     func routeToSplash()
     func routeToLoggedOut()
+    func routeToLoggedIn(token: String)
 }
 
 protocol RootPresentable: Presentable {
@@ -58,4 +59,10 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     func didFinishSplashing() {
         router?.routeToLoggedOut()
     }
+    
+    // MARK: - LoggedInListener
+    func didLogin(token: String) {
+        router?.routeToLoggedIn(token: token)
+    }
+    
 }

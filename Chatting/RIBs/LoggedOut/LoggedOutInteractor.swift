@@ -19,7 +19,7 @@ protocol LoggedOutPresentable: Presentable {
 }
 
 protocol LoggedOutListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func didLogin(token: String)
 }
 
 final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, LoggedOutInteractable, LoggedOutPresentableListener {
@@ -59,15 +59,15 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
             return
         }
         
-        if checkValid(username: username, password: password) {
-            
+        if let token = checkValid(username: username, password: password) {
+            listener?.didLogin(token: token)
         } else {
             presenter.showError("Invalid username and password")
         }
     }
     
-    func checkValid(username: String, password: String) -> Bool {
-        return true
+    func checkValid(username: String, password: String) -> String? {
+        return "token"
     }
     
 }

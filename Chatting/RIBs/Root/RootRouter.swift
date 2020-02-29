@@ -8,14 +8,13 @@
 
 import RIBs
 
-protocol RootInteractable: Interactable, SplashListener, LoggedOutListener {
+protocol RootInteractable: Interactable, SplashListener, LoggedOutListener, LoggedInListener {
     var router: RootRouting? { get set }
     var listener: RootListener? { get set }
 }
 
 protocol RootViewControllable: ViewControllable {
-    func present(viewController: ViewControllable)
-    func dismiss(viewController: ViewControllable)
+    func replaceModal(viewController: ViewControllable?, _ animated: Bool)
 }
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
@@ -24,9 +23,11 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
     init(interactor: RootInteractable,
          viewController: RootViewControllable,
          splashBuilder: SplashBuildable,
-         loggedOutBuilder: LoggedOutBuildable) {
+         loggedOutBuilder: LoggedOutBuildable,
+         loggedInBuilder: LoggedInBuildable) {
         self.splashBuilder = splashBuilder
         self.loggedOutBuilder = loggedOutBuilder
+        self.loggedInBuilder = loggedInBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
@@ -41,22 +42,28 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
     private var splash: ViewableRouting?
     private let loggedOutBuilder: LoggedOutBuildable
     private var loggedOut: ViewableRouting?
+    private let loggedInBuilder: LoggedInBuildable
+    private var loggedIn: ViewableRouting?
     
     func routeToSplash() {
         let splash = splashBuilder.build(withListener: interactor)
         self.splash = splash
         attachChild(splash)
-        viewController.present(viewController: splash.viewControllable)
+        viewController.replaceModal(viewController: splash.viewControllable, false)
     }
     
     func routeToLoggedOut() {
-        if let splash = splash {
-            viewController.dismiss(viewController: splash.viewControllable)
-            detachChild(splash)
-        }
         let loggedOut = loggedOutBuilder.build(withListener: interactor)
         self.loggedOut = loggedOut
         attachChild(loggedOut)
-        viewController.present(viewController: loggedOut.viewControllable)
+        viewController.replaceModal(viewController: loggedOut.viewControllable, false)
+    }
+    
+    func routeToLoggedIn(token: String) {
+        let loggedIn = loggedInBuilder.build(withListener: interactor,
+                                             accessToken: token)
+        self.loggedIn = loggedOut
+        attachChild(loggedIn)
+        viewController.replaceModal(viewController: nil, false)
     }
 }

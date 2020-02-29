@@ -75,6 +75,7 @@ final class LoggedOutViewController: UIViewController, LoggedOutPresentable, Log
             $0.centerX.equalToSuperview()
         })
         buttonLogin.rx.tap
+            .debounce(0.5, scheduler: MainScheduler.instance)
             .subscribe(onNext: { [unowned self] _ in
                 self.listener?.didLogin(username: textFieldUsername.text,
                                         password: textFieldPassword.text)

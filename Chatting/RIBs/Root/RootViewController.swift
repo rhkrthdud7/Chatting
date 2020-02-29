@@ -14,7 +14,7 @@ protocol RootPresentableListener: class {
     func viewDidAppear()
 }
 
-final class RootViewController: UIViewController, RootPresentable, RootViewControllable {
+final class RootViewController: UIViewController, RootPresentable, RootViewControllable, LoggedInViewControllable {
 
     weak var listener: RootPresentableListener?
     
@@ -31,14 +31,35 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
     }
     
     // MARK: - RootViewControllable
-    func present(viewController: ViewControllable) {
-        present(viewController.uiviewController, animated: true, completion: nil)
-    }
-
-    func dismiss(viewController: ViewControllable) {
-        if presentedViewController === viewController.uiviewController {
-            dismiss(animated: false, completion: nil)
+    func replaceModal(viewController: ViewControllable?, _ animated: Bool) {
+        guard !animationInProgress else { return }
+        
+        if presentedViewController != nil {
+            animationInProgress = true
+            dismiss(animated: true) { [weak self] in
+                guard let self = self else { return }
+                
+                if viewController != nil {
+                    self.presentTargetViewController(viewController, animated)
+                } else {
+                    self.animationInProgress = false
+                }
+            }
+        } else {
+            presentTargetViewController(viewController, animated)
         }
     }
-
+    
+    // MARK: - Private
+    private var animationInProgress = false
+    
+    private func presentTargetViewController(_ viewController: ViewControllable?, _ animated: Bool) {
+        if let viewController = viewController {
+            animationInProgress = true
+            present(viewController.uiviewController, animated: animated) { [weak self] in
+                self?.animationInProgress = false
+            }
+        }
+    }
+    
 }
