@@ -40,6 +40,7 @@
 		9CD311C82412660D00B50E6E /* angle_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD311BF2412660D00B50E6E /* angle_mask@2x.png */; };
 		9CD311C92412660D00B50E6E /* angle_mask@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD311C02412660D00B50E6E /* angle_mask@3x.png */; };
 		9CD311CA2412660D00B50E6E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311C12412660D00B50E6E /* Localizable.swift */; };
+		9CD311CD2412665D00B50E6E /* ModelLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311CC2412665D00B50E6E /* ModelLogin.swift */; };
 		B86B7FE84015BA29386BDC32 /* libPods-Chatting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 910A88ABB44AB07F36FECCCD /* libPods-Chatting.a */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		9CD311BF2412660D00B50E6E /* angle_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle_mask@2x.png"; sourceTree = "<group>"; };
 		9CD311C02412660D00B50E6E /* angle_mask@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle_mask@3x.png"; sourceTree = "<group>"; };
 		9CD311C12412660D00B50E6E /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		9CD311CC2412665D00B50E6E /* ModelLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelLogin.swift; sourceTree = "<group>"; };
 		A7336BB5C6A8F0605C50BCC3 /* Pods-Chatting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting.release.xcconfig"; path = "Target Support Files/Pods-Chatting/Pods-Chatting.release.xcconfig"; sourceTree = "<group>"; };
 		B2101DDDF04151300AD2C8D9 /* Pods-Chatting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting.debug.xcconfig"; path = "Target Support Files/Pods-Chatting/Pods-Chatting.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 			children = (
 				9C8D402B240AB23E0007E71F /* App */,
 				9CD311B72412660D00B50E6E /* Library */,
+				9CD311CB2412665D00B50E6E /* Model */,
 				9C8D400C240AAAF10007E71F /* RIBs */,
 				9C8D4001240AAAE60007E71F /* Assets.xcassets */,
 				9C8D4003240AAAE60007E71F /* LaunchScreen.storyboard */,
@@ -246,6 +249,14 @@
 				9CD311C02412660D00B50E6E /* angle_mask@3x.png */,
 			);
 			path = SSActivityIndicator;
+			sourceTree = "<group>";
+		};
+		9CD311CB2412665D00B50E6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CD311CC2412665D00B50E6E /* ModelLogin.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D4BD492ACD54FC86E6CBEB8D /* Frameworks */ = {
@@ -365,6 +376,7 @@
 				9CD311C62412660D00B50E6E /* SSActivityIndicator.swift in Sources */,
 				9CD311CA2412660D00B50E6E /* Localizable.swift in Sources */,
 				9C8D401C240AAED60007E71F /* RootRouter.swift in Sources */,
+				9CD311CD2412665D00B50E6E /* ModelLogin.swift in Sources */,
 				9C8D4048240ABD650007E71F /* SplashViewController.swift in Sources */,
 				9C8D401F240AAED60007E71F /* RootInteractor.swift in Sources */,
 				9C8D4052240ACD9E0007E71F /* LoggedInBuilder.swift in Sources */,
