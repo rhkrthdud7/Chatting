@@ -62,11 +62,16 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
         router?.routeToLoggedIn(token: "token")
     }
     
-    // MARK: - LoggedInListener
+    // MARK: - LoggedOutListener
     func didLogin(token: String) {
         presenter.startLoading()
         router?.routeToLoggedIn(token: token)
         presenter.stopLoading()
+    }
+    
+    // MARK: - LoggedInListener
+    func didLogout() {
+        router?.routeToLoggedOut()
     }
     
 }

@@ -36,8 +36,10 @@ final class HomeBuilder: Builder<HomeDependency>, HomeBuildable {
         let interactor = HomeInteractor(presenter: viewController)
         interactor.listener = listener
         let chatListBuilder = ChatListBuilder(dependency: component)
+        let settingBuilder = SettingBuilder(dependency: component)
         return HomeRouter(interactor: interactor,
                           viewController: viewController,
-                          chatListBuilder: chatListBuilder)
+                          chatListBuilder: chatListBuilder,
+                          settingBuilder: settingBuilder)
     }
 }

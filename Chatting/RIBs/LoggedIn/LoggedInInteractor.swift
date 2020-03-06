@@ -15,7 +15,7 @@ protocol LoggedInRouting: Routing {
 }
 
 protocol LoggedInListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func didLogout()
 }
 
 final class LoggedInInteractor: Interactor, LoggedInInteractable {
@@ -38,5 +38,9 @@ final class LoggedInInteractor: Interactor, LoggedInInteractable {
 
         router?.cleanupViews()
         // TODO: Pause any business logic.
+    }
+    
+    func didLogout() {
+        listener?.didLogout()
     }
 }

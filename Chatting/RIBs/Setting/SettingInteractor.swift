@@ -19,7 +19,7 @@ protocol SettingPresentable: Presentable {
 }
 
 protocol SettingListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func didLogout()
 }
 
 final class SettingInteractor: PresentableInteractor<SettingPresentable>, SettingInteractable, SettingPresentableListener {
@@ -42,5 +42,9 @@ final class SettingInteractor: PresentableInteractor<SettingPresentable>, Settin
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+    
+    func didLogout() {
+        listener?.didLogout()
     }
 }

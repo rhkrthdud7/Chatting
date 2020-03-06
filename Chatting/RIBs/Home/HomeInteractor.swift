@@ -19,7 +19,7 @@ protocol HomePresentable: Presentable {
 }
 
 protocol HomeListener: class {
-    // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func didLogout()
 }
 
 final class HomeInteractor: PresentableInteractor<HomePresentable>, HomeInteractable, HomePresentableListener {
@@ -43,4 +43,9 @@ final class HomeInteractor: PresentableInteractor<HomePresentable>, HomeInteract
         super.willResignActive()
         // TODO: Pause any business logic.
     }
+    
+    func didLogout() {
+        listener?.didLogout()
+    }
+    
 }

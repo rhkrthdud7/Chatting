@@ -119,9 +119,9 @@ final class ChatListViewController: UIViewController, ChatListPresentable, ChatL
             }).disposed(by: disposeBag)
         
         Observable.of(chatRoomList)
-            .bind(to: tableView.rx.items, curriedArgument: {  tableView, row, data -> ChatRoomCell in
+            .bind(to: tableView.rx.items, curriedArgument: {  tableView, row, element -> ChatRoomCell in
                 let cell = tableView.dequeueReusableCell(withClass: ChatRoomCell.self, for: IndexPath(row: row, section: 0))
-                cell.configure(data: data)
+                cell.configure(data: element)
                 return cell
             }).disposed(by: disposeBag)
     }
