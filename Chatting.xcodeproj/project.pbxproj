@@ -31,6 +31,15 @@
 		9C8D4052240ACD9E0007E71F /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D404F240ACD9E0007E71F /* LoggedInBuilder.swift */; };
 		9C8D4053240ACD9E0007E71F /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D4050240ACD9E0007E71F /* LoggedInInteractor.swift */; };
 		9C8D4055240AD0E40007E71F /* RootComponent+LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D4054240AD0E40007E71F /* RootComponent+LoggedIn.swift */; };
+		9CD311C22412660D00B50E6E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311B82412660D00B50E6E /* Constants.swift */; };
+		9CD311C32412660D00B50E6E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311B92412660D00B50E6E /* UIView+Extensions.swift */; };
+		9CD311C42412660D00B50E6E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311BA2412660D00B50E6E /* Reusable.swift */; };
+		9CD311C52412660D00B50E6E /* SSAnimatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311BC2412660D00B50E6E /* SSAnimatingView.swift */; };
+		9CD311C62412660D00B50E6E /* SSActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311BD2412660D00B50E6E /* SSActivityIndicator.swift */; };
+		9CD311C72412660D00B50E6E /* angle_mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD311BE2412660D00B50E6E /* angle_mask.png */; };
+		9CD311C82412660D00B50E6E /* angle_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD311BF2412660D00B50E6E /* angle_mask@2x.png */; };
+		9CD311C92412660D00B50E6E /* angle_mask@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CD311C02412660D00B50E6E /* angle_mask@3x.png */; };
+		9CD311CA2412660D00B50E6E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311C12412660D00B50E6E /* Localizable.swift */; };
 		B86B7FE84015BA29386BDC32 /* libPods-Chatting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 910A88ABB44AB07F36FECCCD /* libPods-Chatting.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +84,15 @@
 		9C8D404F240ACD9E0007E71F /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
 		9C8D4050240ACD9E0007E71F /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
 		9C8D4054240AD0E40007E71F /* RootComponent+LoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedIn.swift"; sourceTree = "<group>"; };
+		9CD311B82412660D00B50E6E /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9CD311B92412660D00B50E6E /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		9CD311BA2412660D00B50E6E /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		9CD311BC2412660D00B50E6E /* SSAnimatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSAnimatingView.swift; sourceTree = "<group>"; };
+		9CD311BD2412660D00B50E6E /* SSActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSActivityIndicator.swift; sourceTree = "<group>"; };
+		9CD311BE2412660D00B50E6E /* angle_mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = angle_mask.png; sourceTree = "<group>"; };
+		9CD311BF2412660D00B50E6E /* angle_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle_mask@2x.png"; sourceTree = "<group>"; };
+		9CD311C02412660D00B50E6E /* angle_mask@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "angle_mask@3x.png"; sourceTree = "<group>"; };
+		9CD311C12412660D00B50E6E /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		A7336BB5C6A8F0605C50BCC3 /* Pods-Chatting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting.release.xcconfig"; path = "Target Support Files/Pods-Chatting/Pods-Chatting.release.xcconfig"; sourceTree = "<group>"; };
 		B2101DDDF04151300AD2C8D9 /* Pods-Chatting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting.debug.xcconfig"; path = "Target Support Files/Pods-Chatting/Pods-Chatting.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				9C8D402B240AB23E0007E71F /* App */,
+				9CD311B72412660D00B50E6E /* Library */,
 				9C8D400C240AAAF10007E71F /* RIBs */,
 				9C8D4001240AAAE60007E71F /* Assets.xcassets */,
 				9C8D4003240AAAE60007E71F /* LaunchScreen.storyboard */,
@@ -205,6 +224,30 @@
 			path = LoggedIn;
 			sourceTree = "<group>";
 		};
+		9CD311B72412660D00B50E6E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				9CD311BB2412660D00B50E6E /* SSActivityIndicator */,
+				9CD311B82412660D00B50E6E /* Constants.swift */,
+				9CD311BA2412660D00B50E6E /* Reusable.swift */,
+				9CD311C12412660D00B50E6E /* Localizable.swift */,
+				9CD311B92412660D00B50E6E /* UIView+Extensions.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		9CD311BB2412660D00B50E6E /* SSActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				9CD311BC2412660D00B50E6E /* SSAnimatingView.swift */,
+				9CD311BD2412660D00B50E6E /* SSActivityIndicator.swift */,
+				9CD311BE2412660D00B50E6E /* angle_mask.png */,
+				9CD311BF2412660D00B50E6E /* angle_mask@2x.png */,
+				9CD311C02412660D00B50E6E /* angle_mask@3x.png */,
+			);
+			path = SSActivityIndicator;
+			sourceTree = "<group>";
+		};
 		D4BD492ACD54FC86E6CBEB8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,8 +316,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD311C82412660D00B50E6E /* angle_mask@2x.png in Resources */,
+				9CD311C72412660D00B50E6E /* angle_mask.png in Resources */,
 				9C8D4005240AAAE60007E71F /* LaunchScreen.storyboard in Resources */,
 				9C8D4002240AAAE60007E71F /* Assets.xcassets in Resources */,
+				9CD311C92412660D00B50E6E /* angle_mask@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,20 +357,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C8D401D240AAED60007E71F /* RootViewController.swift in Sources */,
+				9CD311C22412660D00B50E6E /* Constants.swift in Sources */,
 				9C8D4040240AB6640007E71F /* LoggedOutBuilder.swift in Sources */,
 				9C8D4047240ABD650007E71F /* SplashRouter.swift in Sources */,
 				9C8D4053240ACD9E0007E71F /* LoggedInInteractor.swift in Sources */,
 				9C8D4021240AB00C0007E71F /* AppComponent.swift in Sources */,
+				9CD311C62412660D00B50E6E /* SSActivityIndicator.swift in Sources */,
+				9CD311CA2412660D00B50E6E /* Localizable.swift in Sources */,
 				9C8D401C240AAED60007E71F /* RootRouter.swift in Sources */,
 				9C8D4048240ABD650007E71F /* SplashViewController.swift in Sources */,
 				9C8D401F240AAED60007E71F /* RootInteractor.swift in Sources */,
 				9C8D4052240ACD9E0007E71F /* LoggedInBuilder.swift in Sources */,
 				9C8D4051240ACD9E0007E71F /* LoggedInRouter.swift in Sources */,
 				9C8D4055240AD0E40007E71F /* RootComponent+LoggedIn.swift in Sources */,
+				9CD311C42412660D00B50E6E /* Reusable.swift in Sources */,
 				9C8D404A240ABD650007E71F /* SplashInteractor.swift in Sources */,
+				9CD311C32412660D00B50E6E /* UIView+Extensions.swift in Sources */,
 				9C8D4038240AB65A0007E71F /* RootComponent+LoggedOut.swift in Sources */,
 				9C8D4049240ABD650007E71F /* SplashBuilder.swift in Sources */,
 				9C8D3FF9240AAAE60007E71F /* AppDelegate.swift in Sources */,
+				9CD311C52412660D00B50E6E /* SSAnimatingView.swift in Sources */,
 				9C8D4041240AB6640007E71F /* LoggedOutRouter.swift in Sources */,
 				9C8D3FFB240AAAE60007E71F /* SceneDelegate.swift in Sources */,
 				9C8D404C240AC07D0007E71F /* RootComponent+Splash.swift in Sources */,
