@@ -12,5 +12,6 @@ target 'Chatting' do
   pod 'RxCocoa', '~> 4.5.0'
   pod 'SnapKit', '~> 5.0.1'
   pod 'Moya/RxSwift', '~> 13.0.1'
+  pod 'KeychainSwift', '~> 19.0'
 
 end
