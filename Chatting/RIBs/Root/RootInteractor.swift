@@ -8,6 +8,7 @@
 
 import RIBs
 import RxSwift
+import KeychainSwift
 
 protocol RootRouting: ViewableRouting {
     func routeToSplash()
@@ -58,20 +59,41 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     
     // MARK: - SplashListener
     func didFinishSplashing() {
-//        router?.routeToLoggedOut()
-        router?.routeToLoggedIn(token: "token")
+        if let token = retrieveLoginToken() {
+            router?.routeToLoggedIn(token: token)
+        } else {
+            router?.routeToLoggedOut()
+        }
     }
     
     // MARK: - LoggedOutListener
     func didLogin(token: String) {
-        presenter.startLoading()
+        storeLoginToken(token: token)
         router?.routeToLoggedIn(token: token)
-        presenter.stopLoading()
     }
     
     // MARK: - LoggedInListener
     func didLogout() {
+        removeLoginToken()
         router?.routeToLoggedOut()
     }
     
+    // MARK: - Keychain private functions
+    private func storeLoginToken(token: String) {
+        let keychain = KeychainSwift()
+        keychain.set(token, forKey: loginToken)
+    }
+    
+    private func retrieveLoginToken() -> String? {
+        let keychain = KeychainSwift()
+        let token = keychain.get(loginToken)
+        return token
+    }
+    
+    private func removeLoginToken() {
+        let keychain = KeychainSwift()
+        keychain.delete(loginToken)
+    }
+    
+    private let loginToken = "login_token"
 }
