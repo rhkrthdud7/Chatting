@@ -61,6 +61,7 @@
 		9CD311F624126F2100B50E6E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311F224126F2100B50E6E /* SettingViewController.swift */; };
 		9CD311F724126F2100B50E6E /* SettingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311F324126F2100B50E6E /* SettingBuilder.swift */; };
 		9CD311F824126F2100B50E6E /* SettingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311F424126F2100B50E6E /* SettingInteractor.swift */; };
+		9CD311FB24126F6000B50E6E /* HomeComponent+Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311FA24126F6000B50E6E /* HomeComponent+Setting.swift */; };
 		B86B7FE84015BA29386BDC32 /* libPods-Chatting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 910A88ABB44AB07F36FECCCD /* libPods-Chatting.a */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +136,7 @@
 		9CD311F224126F2100B50E6E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9CD311F324126F2100B50E6E /* SettingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBuilder.swift; sourceTree = "<group>"; };
 		9CD311F424126F2100B50E6E /* SettingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractor.swift; sourceTree = "<group>"; };
+		9CD311FA24126F6000B50E6E /* HomeComponent+Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeComponent+Setting.swift"; sourceTree = "<group>"; };
 		A7336BB5C6A8F0605C50BCC3 /* Pods-Chatting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting.release.xcconfig"; path = "Target Support Files/Pods-Chatting/Pods-Chatting.release.xcconfig"; sourceTree = "<group>"; };
 		B2101DDDF04151300AD2C8D9 /* Pods-Chatting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting.debug.xcconfig"; path = "Target Support Files/Pods-Chatting/Pods-Chatting.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -323,6 +325,7 @@
 				9CD311DB2412684500B50E6E /* HomeRouter.swift */,
 				9CD311D92412684500B50E6E /* HomeViewController.swift */,
 				9CD311DA2412684500B50E6E /* HomeComponent+ChatList.swift */,
+				9CD311FA24126F6000B50E6E /* HomeComponent+Setting.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				9CD311D52412667800B50E6E /* APIResponse.swift in Sources */,
 				9CD311C32412660D00B50E6E /* UIView+Extensions.swift in Sources */,
 				9C8D4038240AB65A0007E71F /* RootComponent+LoggedOut.swift in Sources */,
+				9CD311FB24126F6000B50E6E /* HomeComponent+Setting.swift in Sources */,
 				9CD311E62412684600B50E6E /* HomeComponent+ChatList.swift in Sources */,
 				9C8D4049240ABD650007E71F /* SplashBuilder.swift in Sources */,
 				9CD311F02412685800B50E6E /* LoggedInComponent+Home.swift in Sources */,
