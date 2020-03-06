@@ -45,6 +45,18 @@
 		9CD311D42412667800B50E6E /* AccountAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311D02412667800B50E6E /* AccountAPI.swift */; };
 		9CD311D52412667800B50E6E /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311D12412667800B50E6E /* APIResponse.swift */; };
 		9CD311D62412667800B50E6E /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311D22412667800B50E6E /* ErrorType.swift */; };
+		9CD311E42412684600B50E6E /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311D82412684500B50E6E /* HomeInteractor.swift */; };
+		9CD311E52412684600B50E6E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311D92412684500B50E6E /* HomeViewController.swift */; };
+		9CD311E62412684600B50E6E /* HomeComponent+ChatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311DA2412684500B50E6E /* HomeComponent+ChatList.swift */; };
+		9CD311E72412684600B50E6E /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311DB2412684500B50E6E /* HomeRouter.swift */; };
+		9CD311E82412684600B50E6E /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311DC2412684500B50E6E /* HomeBuilder.swift */; };
+		9CD311E92412684600B50E6E /* ChatRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD311DE2412684600B50E6E /* ChatRoomCell.xib */; };
+		9CD311EA2412684600B50E6E /* ChatListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311DF2412684600B50E6E /* ChatListInteractor.swift */; };
+		9CD311EB2412684600B50E6E /* ChatListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311E02412684600B50E6E /* ChatListBuilder.swift */; };
+		9CD311EC2412684600B50E6E /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311E12412684600B50E6E /* ChatListViewController.swift */; };
+		9CD311ED2412684600B50E6E /* ChatRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311E22412684600B50E6E /* ChatRoomCell.swift */; };
+		9CD311EE2412684600B50E6E /* ChatListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311E32412684600B50E6E /* ChatListRouter.swift */; };
+		9CD311F02412685800B50E6E /* LoggedInComponent+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311EF2412685800B50E6E /* LoggedInComponent+Home.swift */; };
 		B86B7FE84015BA29386BDC32 /* libPods-Chatting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 910A88ABB44AB07F36FECCCD /* libPods-Chatting.a */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +115,18 @@
 		9CD311D02412667800B50E6E /* AccountAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountAPI.swift; sourceTree = "<group>"; };
 		9CD311D12412667800B50E6E /* APIResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		9CD311D22412667800B50E6E /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
+		9CD311D82412684500B50E6E /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		9CD311D92412684500B50E6E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9CD311DA2412684500B50E6E /* HomeComponent+ChatList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeComponent+ChatList.swift"; sourceTree = "<group>"; };
+		9CD311DB2412684500B50E6E /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		9CD311DC2412684500B50E6E /* HomeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
+		9CD311DE2412684600B50E6E /* ChatRoomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatRoomCell.xib; sourceTree = "<group>"; };
+		9CD311DF2412684600B50E6E /* ChatListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListInteractor.swift; sourceTree = "<group>"; };
+		9CD311E02412684600B50E6E /* ChatListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListBuilder.swift; sourceTree = "<group>"; };
+		9CD311E12412684600B50E6E /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		9CD311E22412684600B50E6E /* ChatRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomCell.swift; sourceTree = "<group>"; };
+		9CD311E32412684600B50E6E /* ChatListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListRouter.swift; sourceTree = "<group>"; };
+		9CD311EF2412685800B50E6E /* LoggedInComponent+Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoggedInComponent+Home.swift"; sourceTree = "<group>"; };
 		A7336BB5C6A8F0605C50BCC3 /* Pods-Chatting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting.release.xcconfig"; path = "Target Support Files/Pods-Chatting/Pods-Chatting.release.xcconfig"; sourceTree = "<group>"; };
 		B2101DDDF04151300AD2C8D9 /* Pods-Chatting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting.debug.xcconfig"; path = "Target Support Files/Pods-Chatting/Pods-Chatting.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +200,8 @@
 				9C8D4042240ABD550007E71F /* Splash */,
 				9C8D4039240AB6640007E71F /* LoggedOut */,
 				9C8D404D240ACD720007E71F /* LoggedIn */,
+				9CD311D72412684500B50E6E /* Home */,
+				9CD311DD2412684600B50E6E /* ChatList */,
 			);
 			path = RIBs;
 			sourceTree = "<group>";
@@ -232,6 +258,7 @@
 				9C8D404F240ACD9E0007E71F /* LoggedInBuilder.swift */,
 				9C8D4050240ACD9E0007E71F /* LoggedInInteractor.swift */,
 				9C8D404E240ACD9E0007E71F /* LoggedInRouter.swift */,
+				9CD311EF2412685800B50E6E /* LoggedInComponent+Home.swift */,
 			);
 			path = LoggedIn;
 			sourceTree = "<group>";
@@ -277,6 +304,31 @@
 				9CD311D22412667800B50E6E /* ErrorType.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		9CD311D72412684500B50E6E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9CD311DC2412684500B50E6E /* HomeBuilder.swift */,
+				9CD311D82412684500B50E6E /* HomeInteractor.swift */,
+				9CD311DB2412684500B50E6E /* HomeRouter.swift */,
+				9CD311D92412684500B50E6E /* HomeViewController.swift */,
+				9CD311DA2412684500B50E6E /* HomeComponent+ChatList.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9CD311DD2412684600B50E6E /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				9CD311E02412684600B50E6E /* ChatListBuilder.swift */,
+				9CD311DF2412684600B50E6E /* ChatListInteractor.swift */,
+				9CD311E32412684600B50E6E /* ChatListRouter.swift */,
+				9CD311E12412684600B50E6E /* ChatListViewController.swift */,
+				9CD311E22412684600B50E6E /* ChatRoomCell.swift */,
+				9CD311DE2412684600B50E6E /* ChatRoomCell.xib */,
+			);
+			path = ChatList;
 			sourceTree = "<group>";
 		};
 		D4BD492ACD54FC86E6CBEB8D /* Frameworks */ = {
@@ -349,6 +401,7 @@
 			files = (
 				9CD311C82412660D00B50E6E /* angle_mask@2x.png in Resources */,
 				9CD311C72412660D00B50E6E /* angle_mask.png in Resources */,
+				9CD311E92412684600B50E6E /* ChatRoomCell.xib in Resources */,
 				9C8D4005240AAAE60007E71F /* LaunchScreen.storyboard in Resources */,
 				9C8D4002240AAAE60007E71F /* Assets.xcassets in Resources */,
 				9CD311C92412660D00B50E6E /* angle_mask@3x.png in Resources */,
@@ -390,15 +443,19 @@
 				9C8D401D240AAED60007E71F /* RootViewController.swift in Sources */,
 				9CD311C22412660D00B50E6E /* Constants.swift in Sources */,
 				9C8D4040240AB6640007E71F /* LoggedOutBuilder.swift in Sources */,
+				9CD311E52412684600B50E6E /* HomeViewController.swift in Sources */,
 				9C8D4047240ABD650007E71F /* SplashRouter.swift in Sources */,
 				9C8D4053240ACD9E0007E71F /* LoggedInInteractor.swift in Sources */,
 				9C8D4021240AB00C0007E71F /* AppComponent.swift in Sources */,
 				9CD311C62412660D00B50E6E /* SSActivityIndicator.swift in Sources */,
+				9CD311EE2412684600B50E6E /* ChatListRouter.swift in Sources */,
 				9CD311CA2412660D00B50E6E /* Localizable.swift in Sources */,
 				9C8D401C240AAED60007E71F /* RootRouter.swift in Sources */,
 				9CD311CD2412665D00B50E6E /* ModelLogin.swift in Sources */,
 				9C8D4048240ABD650007E71F /* SplashViewController.swift in Sources */,
+				9CD311EB2412684600B50E6E /* ChatListBuilder.swift in Sources */,
 				9C8D401F240AAED60007E71F /* RootInteractor.swift in Sources */,
+				9CD311E42412684600B50E6E /* HomeInteractor.swift in Sources */,
 				9C8D4052240ACD9E0007E71F /* LoggedInBuilder.swift in Sources */,
 				9C8D4051240ACD9E0007E71F /* LoggedInRouter.swift in Sources */,
 				9CD311D32412667800B50E6E /* NetworkManager.swift in Sources */,
@@ -408,12 +465,19 @@
 				9CD311D52412667800B50E6E /* APIResponse.swift in Sources */,
 				9CD311C32412660D00B50E6E /* UIView+Extensions.swift in Sources */,
 				9C8D4038240AB65A0007E71F /* RootComponent+LoggedOut.swift in Sources */,
+				9CD311E62412684600B50E6E /* HomeComponent+ChatList.swift in Sources */,
 				9C8D4049240ABD650007E71F /* SplashBuilder.swift in Sources */,
+				9CD311F02412685800B50E6E /* LoggedInComponent+Home.swift in Sources */,
+				9CD311E72412684600B50E6E /* HomeRouter.swift in Sources */,
+				9CD311E82412684600B50E6E /* HomeBuilder.swift in Sources */,
 				9CD311D62412667800B50E6E /* ErrorType.swift in Sources */,
+				9CD311ED2412684600B50E6E /* ChatRoomCell.swift in Sources */,
+				9CD311EA2412684600B50E6E /* ChatListInteractor.swift in Sources */,
 				9C8D3FF9240AAAE60007E71F /* AppDelegate.swift in Sources */,
 				9CD311C52412660D00B50E6E /* SSAnimatingView.swift in Sources */,
 				9C8D4041240AB6640007E71F /* LoggedOutRouter.swift in Sources */,
 				9CD311D42412667800B50E6E /* AccountAPI.swift in Sources */,
+				9CD311EC2412684600B50E6E /* ChatListViewController.swift in Sources */,
 				9C8D3FFB240AAAE60007E71F /* SceneDelegate.swift in Sources */,
 				9C8D404C240AC07D0007E71F /* RootComponent+Splash.swift in Sources */,
 				9C8D403F240AB6640007E71F /* LoggedOutInteractor.swift in Sources */,
