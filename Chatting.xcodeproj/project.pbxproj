@@ -129,6 +129,7 @@
 		9C8D3FF7240AAAE60007E71F /* Chatting */ = {
 			isa = PBXGroup;
 			children = (
+				9C8D402B240AB23E0007E71F /* App */,
 				9C8D400C240AAAF10007E71F /* RIBs */,
 				9C8D4001240AAAE60007E71F /* Assets.xcassets */,
 				9C8D4003240AAAE60007E71F /* LaunchScreen.storyboard */,
@@ -140,7 +141,6 @@
 		9C8D400C240AAAF10007E71F /* RIBs */ = {
 			isa = PBXGroup;
 			children = (
-				9C8D402B240AB23E0007E71F /* App */,
 				9C8D4016240AAEBC0007E71F /* Root */,
 				9C8D4042240ABD550007E71F /* Splash */,
 				9C8D4039240AB6640007E71F /* LoggedOut */,
