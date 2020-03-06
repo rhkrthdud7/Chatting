@@ -57,6 +57,10 @@
 		9CD311ED2412684600B50E6E /* ChatRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311E22412684600B50E6E /* ChatRoomCell.swift */; };
 		9CD311EE2412684600B50E6E /* ChatListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311E32412684600B50E6E /* ChatListRouter.swift */; };
 		9CD311F02412685800B50E6E /* LoggedInComponent+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311EF2412685800B50E6E /* LoggedInComponent+Home.swift */; };
+		9CD311F524126F2100B50E6E /* SettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311F124126F2100B50E6E /* SettingRouter.swift */; };
+		9CD311F624126F2100B50E6E /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311F224126F2100B50E6E /* SettingViewController.swift */; };
+		9CD311F724126F2100B50E6E /* SettingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311F324126F2100B50E6E /* SettingBuilder.swift */; };
+		9CD311F824126F2100B50E6E /* SettingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311F424126F2100B50E6E /* SettingInteractor.swift */; };
 		B86B7FE84015BA29386BDC32 /* libPods-Chatting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 910A88ABB44AB07F36FECCCD /* libPods-Chatting.a */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +131,10 @@
 		9CD311E22412684600B50E6E /* ChatRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomCell.swift; sourceTree = "<group>"; };
 		9CD311E32412684600B50E6E /* ChatListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListRouter.swift; sourceTree = "<group>"; };
 		9CD311EF2412685800B50E6E /* LoggedInComponent+Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoggedInComponent+Home.swift"; sourceTree = "<group>"; };
+		9CD311F124126F2100B50E6E /* SettingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRouter.swift; sourceTree = "<group>"; };
+		9CD311F224126F2100B50E6E /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		9CD311F324126F2100B50E6E /* SettingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBuilder.swift; sourceTree = "<group>"; };
+		9CD311F424126F2100B50E6E /* SettingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInteractor.swift; sourceTree = "<group>"; };
 		A7336BB5C6A8F0605C50BCC3 /* Pods-Chatting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting.release.xcconfig"; path = "Target Support Files/Pods-Chatting/Pods-Chatting.release.xcconfig"; sourceTree = "<group>"; };
 		B2101DDDF04151300AD2C8D9 /* Pods-Chatting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatting.debug.xcconfig"; path = "Target Support Files/Pods-Chatting/Pods-Chatting.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,6 +210,7 @@
 				9C8D404D240ACD720007E71F /* LoggedIn */,
 				9CD311D72412684500B50E6E /* Home */,
 				9CD311DD2412684600B50E6E /* ChatList */,
+				9CD311F924126F2C00B50E6E /* Setting */,
 			);
 			path = RIBs;
 			sourceTree = "<group>";
@@ -331,6 +340,17 @@
 			path = ChatList;
 			sourceTree = "<group>";
 		};
+		9CD311F924126F2C00B50E6E /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				9CD311F324126F2100B50E6E /* SettingBuilder.swift */,
+				9CD311F424126F2100B50E6E /* SettingInteractor.swift */,
+				9CD311F124126F2100B50E6E /* SettingRouter.swift */,
+				9CD311F224126F2100B50E6E /* SettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		D4BD492ACD54FC86E6CBEB8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,6 +465,7 @@
 				9C8D4040240AB6640007E71F /* LoggedOutBuilder.swift in Sources */,
 				9CD311E52412684600B50E6E /* HomeViewController.swift in Sources */,
 				9C8D4047240ABD650007E71F /* SplashRouter.swift in Sources */,
+				9CD311F624126F2100B50E6E /* SettingViewController.swift in Sources */,
 				9C8D4053240ACD9E0007E71F /* LoggedInInteractor.swift in Sources */,
 				9C8D4021240AB00C0007E71F /* AppComponent.swift in Sources */,
 				9CD311C62412660D00B50E6E /* SSActivityIndicator.swift in Sources */,
@@ -461,6 +482,7 @@
 				9CD311D32412667800B50E6E /* NetworkManager.swift in Sources */,
 				9C8D4055240AD0E40007E71F /* RootComponent+LoggedIn.swift in Sources */,
 				9CD311C42412660D00B50E6E /* Reusable.swift in Sources */,
+				9CD311F524126F2100B50E6E /* SettingRouter.swift in Sources */,
 				9C8D404A240ABD650007E71F /* SplashInteractor.swift in Sources */,
 				9CD311D52412667800B50E6E /* APIResponse.swift in Sources */,
 				9CD311C32412660D00B50E6E /* UIView+Extensions.swift in Sources */,
@@ -472,8 +494,10 @@
 				9CD311E82412684600B50E6E /* HomeBuilder.swift in Sources */,
 				9CD311D62412667800B50E6E /* ErrorType.swift in Sources */,
 				9CD311ED2412684600B50E6E /* ChatRoomCell.swift in Sources */,
+				9CD311F824126F2100B50E6E /* SettingInteractor.swift in Sources */,
 				9CD311EA2412684600B50E6E /* ChatListInteractor.swift in Sources */,
 				9C8D3FF9240AAAE60007E71F /* AppDelegate.swift in Sources */,
+				9CD311F724126F2100B50E6E /* SettingBuilder.swift in Sources */,
 				9CD311C52412660D00B50E6E /* SSAnimatingView.swift in Sources */,
 				9C8D4041240AB6640007E71F /* LoggedOutRouter.swift in Sources */,
 				9CD311D42412667800B50E6E /* AccountAPI.swift in Sources */,
