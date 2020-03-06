@@ -50,6 +50,14 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
         }
     }
     
+    func startLoading() {
+        SSActivityIndicator.show()
+    }
+    
+    func stopLoading() {
+        SSActivityIndicator.hide()
+    }
+    
     // MARK: - Private
     private var animationInProgress = false
     

@@ -18,6 +18,8 @@ struct NetworkManager {
         _ token: MultiTarget,
         onSuccess: @escaping (T) -> Void,
         onError: @escaping (Error) -> Void) {
+//        let provider = MoyaProvider<MultiTarget>()
+        // fake request
         let provider = MoyaProvider<MultiTarget>(stubClosure: MoyaProvider.delayedStub(3))
         provider.rx
             .request(token)

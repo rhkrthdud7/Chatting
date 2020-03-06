@@ -43,7 +43,8 @@ final class SplashViewController: UIViewController, SplashPresentable, SplashVie
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [unowned self] in
+        // temporary splash
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0) { [unowned self] in
             self.listener?.didFinishSplashing()
         }
     }

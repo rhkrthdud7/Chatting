@@ -17,7 +17,8 @@ protocol RootRouting: ViewableRouting {
 
 protocol RootPresentable: Presentable {
     var listener: RootPresentableListener? { get set }
-    // TODO: Declare methods the interactor can invoke the presenter to present data.
+    func startLoading()
+    func stopLoading()
 }
 
 protocol RootListener: class {
@@ -57,12 +58,15 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     
     // MARK: - SplashListener
     func didFinishSplashing() {
-        router?.routeToLoggedOut()
+//        router?.routeToLoggedOut()
+        router?.routeToLoggedIn(token: "token")
     }
     
     // MARK: - LoggedInListener
     func didLogin(token: String) {
+        presenter.startLoading()
         router?.routeToLoggedIn(token: token)
+        presenter.stopLoading()
     }
     
 }

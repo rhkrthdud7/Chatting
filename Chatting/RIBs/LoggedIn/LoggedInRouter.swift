@@ -8,32 +8,44 @@
 
 import RIBs
 
-protocol LoggedInInteractable: Interactable {
+protocol LoggedInInteractable: Interactable, HomeListener {
     var router: LoggedInRouting? { get set }
     var listener: LoggedInListener? { get set }
 }
 
 protocol LoggedInViewControllable: ViewControllable {
-    // TODO: Declare methods the router invokes to manipulate the view hierarchy. Since
-    // this RIB does not own its own view, this protocol is conformed to by one of this
-    // RIB's ancestor RIBs' view.
+    func replaceModal(viewController: ViewControllable?, _ animated: Bool)
 }
 
 final class LoggedInRouter: Router<LoggedInInteractable>, LoggedInRouting {
 
     // TODO: Constructor inject child builder protocols to allow building children.
-    init(interactor: LoggedInInteractable, viewController: LoggedInViewControllable) {
+    init(interactor: LoggedInInteractable,
+         viewController: LoggedInViewControllable,
+         homeBuilder: HomeBuildable) {
         self.viewController = viewController
+        self.homeBuilder = homeBuilder
         super.init(interactor: interactor)
         interactor.router = self
     }
 
     func cleanupViews() {
-        // TODO: Since this router does not own its view, it needs to cleanup the views
-        // it may have added to the view hierarchy, when its interactor is deactivated.
+        if let home = home {
+            detachChild(home)
+        }
+        viewController.replaceModal(viewController: nil, false)
     }
 
     // MARK: - Private
-
     private let viewController: LoggedInViewControllable
+    private let homeBuilder: HomeBuildable
+    private var home: ViewableRouting?
+    
+    func routeToHome() {
+        let home = homeBuilder.build(withListener: interactor)
+        self.home = home
+        attachChild(home)
+        viewController.replaceModal(viewController: home.viewControllable, false)
+    }
+    
 }

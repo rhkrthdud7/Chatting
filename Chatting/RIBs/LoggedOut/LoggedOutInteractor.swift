@@ -8,6 +8,7 @@
 
 import RIBs
 import RxSwift
+import Moya
 
 protocol LoggedOutRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
@@ -16,6 +17,8 @@ protocol LoggedOutRouting: ViewableRouting {
 protocol LoggedOutPresentable: Presentable {
     var listener: LoggedOutPresentableListener? { get set }
     func showError(_ text: String)
+    func startLoading()
+    func stopLoading()
 }
 
 protocol LoggedOutListener: class {
@@ -59,15 +62,37 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
             return
         }
         
-        if let token = checkValid(username: username, password: password) {
-            listener?.didLogin(token: token)
-        } else {
-            presenter.showError("Invalid username and password")
-        }
+        attemptLogin(username, password, completion: { [weak self] token, error in
+            if let error = error as? ErrorType {
+                self?.presenter.showError(error.description)
+            } else if let error = error {
+                self?.presenter.showError(error.localizedDescription)
+            } else if let token = token {
+                self?.listener?.didLogin(token: token)
+            }
+        })
     }
     
-    func checkValid(username: String, password: String) -> String? {
-        return "token"
+    private func attemptLogin(_ username: String, _ password: String, completion: @escaping (String?, Error?) -> Void) {
+        presenter.startLoading()
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: { [weak self] in
+//            self?.presenter.stopLoading()
+//            if username == "qwe" && password == "123" {
+//                completion("token", nil)
+//            } else {
+//                completion(nil, ErrorType(statusCode: 480))
+//            }
+//        })
+        
+        NetworkManager
+            .request(MultiTarget(AccountAPI.login(username: username, password: password)), onSuccess: { [weak self] (data: ModelLogin)  in
+                self?.presenter.stopLoading()
+                completion(data.token, nil)
+            }, onError: { [weak self] error in
+                self?.presenter.stopLoading()
+                completion(nil, error)
+            })
     }
     
 }

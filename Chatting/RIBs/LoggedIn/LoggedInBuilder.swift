@@ -9,16 +9,12 @@
 import RIBs
 
 protocol LoggedInDependency: Dependency {
-    // TODO: Make sure to convert the variable into lower-camelcase.
     var LoggedInViewController: LoggedInViewControllable { get }
-    // TODO: Declare the set of dependencies required by this RIB, but won't be
-    // created by this RIB.
 }
 
 final class LoggedInComponent: Component<LoggedInDependency> {
     let token: String
     
-    // TODO: Make sure to convert the variable into lower-camelcase.
     fileprivate var LoggedInViewController: LoggedInViewControllable {
         return dependency.LoggedInViewController
     }
@@ -27,8 +23,6 @@ final class LoggedInComponent: Component<LoggedInDependency> {
         self.token = token
         super.init(dependency: dependency)
     }
-
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
 
 // MARK: - Builder
@@ -49,6 +43,9 @@ final class LoggedInBuilder: Builder<LoggedInDependency>, LoggedInBuildable {
                                           accessToken: token)
         let interactor = LoggedInInteractor()
         interactor.listener = listener
-        return LoggedInRouter(interactor: interactor, viewController: component.LoggedInViewController)
+        let homeBuilder = HomeBuilder(dependency: component)
+        return LoggedInRouter(interactor: interactor,
+                              viewController: component.LoggedInViewController,
+                              homeBuilder: homeBuilder)
     }
 }
