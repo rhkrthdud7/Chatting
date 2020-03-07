@@ -80,16 +80,34 @@ final class SettingViewController: UIViewController, SettingPresentable, Setting
             $0.trailing.equalToSuperview().offset(-10)
         })
         
-        // logout button
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.rowHeight = 44
+        tableView.backgroundColor = .white
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints({
+            $0.top.equalTo(viewNavigation.snp.bottom)
+            $0.leading.trailing.bottom.equalToSuperview()
+        })
         let buttonLogout = UIButton(type: .system)
         buttonLogout.setTitle("로그아웃", for: .normal)
         buttonLogout.tintColor = .red
         view.addSubview(buttonLogout)
+        let cellLogout = UITableViewCell()
+        cellLogout.addSubview(buttonLogout)
         buttonLogout.snp.makeConstraints({
-            $0.leading.bottom.trailing.equalToSuperview()
-            $0.height.equalTo(50)
+            $0.edges.equalToSuperview()
         })
         
+        tableView.rx.contentOffset
+            .map({ $0.y > 0 })
+            .distinctUntilChanged()
+            .subscribe(onNext: { isGreaterThanZero in
+                viewSeparator.isHidden = !isGreaterThanZero
+            }).disposed(by: disposeBag)
+        Observable.of([cellLogout])
+            .bind(to: tableView.rx.items, curriedArgument: { tableView, row, element -> UITableViewCell in
+                return element
+            }).disposed(by: disposeBag)
         buttonLogout.rx.tap
             .debounce(0.3, scheduler: MainScheduler.instance)
             .subscribe(onNext: { [unowned self] in
