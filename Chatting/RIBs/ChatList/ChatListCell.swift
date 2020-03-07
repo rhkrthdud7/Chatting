@@ -26,6 +26,12 @@ class ChatListCell: UITableViewCell {
         viewProfile.addSubview(imageView4)
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        [imageView1, imageView2, imageView3, imageView4].forEach({ $0.frame = .zero })
+    }
+    
     func configure(data: ChatRoomViewModel) {
         let imageViews = [imageView1, imageView2, imageView3, imageView4]
         setFrameAndRadius(imageViews: Array(imageViews[0..<data.imageURLs.count]))
