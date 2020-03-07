@@ -49,11 +49,11 @@
 		9CD311E62412684600B50E6E /* HomeComponent+ChatList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311DA2412684500B50E6E /* HomeComponent+ChatList.swift */; };
 		9CD311E72412684600B50E6E /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311DB2412684500B50E6E /* HomeRouter.swift */; };
 		9CD311E82412684600B50E6E /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311DC2412684500B50E6E /* HomeBuilder.swift */; };
-		9CD311E92412684600B50E6E /* ChatRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD311DE2412684600B50E6E /* ChatRoomCell.xib */; };
+		9CD311E92412684600B50E6E /* ChatListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CD311DE2412684600B50E6E /* ChatListCell.xib */; };
 		9CD311EA2412684600B50E6E /* ChatListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311DF2412684600B50E6E /* ChatListInteractor.swift */; };
 		9CD311EB2412684600B50E6E /* ChatListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311E02412684600B50E6E /* ChatListBuilder.swift */; };
 		9CD311EC2412684600B50E6E /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311E12412684600B50E6E /* ChatListViewController.swift */; };
-		9CD311ED2412684600B50E6E /* ChatRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311E22412684600B50E6E /* ChatRoomCell.swift */; };
+		9CD311ED2412684600B50E6E /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311E22412684600B50E6E /* ChatListCell.swift */; };
 		9CD311EE2412684600B50E6E /* ChatListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311E32412684600B50E6E /* ChatListRouter.swift */; };
 		9CD311F02412685800B50E6E /* LoggedInComponent+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311EF2412685800B50E6E /* LoggedInComponent+Home.swift */; };
 		9CD311F524126F2100B50E6E /* SettingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD311F124126F2100B50E6E /* SettingRouter.swift */; };
@@ -123,11 +123,11 @@
 		9CD311DA2412684500B50E6E /* HomeComponent+ChatList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeComponent+ChatList.swift"; sourceTree = "<group>"; };
 		9CD311DB2412684500B50E6E /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		9CD311DC2412684500B50E6E /* HomeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
-		9CD311DE2412684600B50E6E /* ChatRoomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatRoomCell.xib; sourceTree = "<group>"; };
+		9CD311DE2412684600B50E6E /* ChatListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatListCell.xib; sourceTree = "<group>"; };
 		9CD311DF2412684600B50E6E /* ChatListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListInteractor.swift; sourceTree = "<group>"; };
 		9CD311E02412684600B50E6E /* ChatListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListBuilder.swift; sourceTree = "<group>"; };
 		9CD311E12412684600B50E6E /* ChatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
-		9CD311E22412684600B50E6E /* ChatRoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomCell.swift; sourceTree = "<group>"; };
+		9CD311E22412684600B50E6E /* ChatListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
 		9CD311E32412684600B50E6E /* ChatListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListRouter.swift; sourceTree = "<group>"; };
 		9CD311EF2412685800B50E6E /* LoggedInComponent+Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoggedInComponent+Home.swift"; sourceTree = "<group>"; };
 		9CD311F124126F2100B50E6E /* SettingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRouter.swift; sourceTree = "<group>"; };
@@ -334,8 +334,8 @@
 				9CD311DF2412684600B50E6E /* ChatListInteractor.swift */,
 				9CD311E32412684600B50E6E /* ChatListRouter.swift */,
 				9CD311E12412684600B50E6E /* ChatListViewController.swift */,
-				9CD311E22412684600B50E6E /* ChatRoomCell.swift */,
-				9CD311DE2412684600B50E6E /* ChatRoomCell.xib */,
+				9CD311E22412684600B50E6E /* ChatListCell.swift */,
+				9CD311DE2412684600B50E6E /* ChatListCell.xib */,
 			);
 			path = ChatList;
 			sourceTree = "<group>";
@@ -421,7 +421,7 @@
 			files = (
 				9CD311C82412660D00B50E6E /* angle_mask@2x.png in Resources */,
 				9CD311C72412660D00B50E6E /* angle_mask.png in Resources */,
-				9CD311E92412684600B50E6E /* ChatRoomCell.xib in Resources */,
+				9CD311E92412684600B50E6E /* ChatListCell.xib in Resources */,
 				9C8D4005240AAAE60007E71F /* LaunchScreen.storyboard in Resources */,
 				9C8D4002240AAAE60007E71F /* Assets.xcassets in Resources */,
 				9CD311C92412660D00B50E6E /* angle_mask@3x.png in Resources */,
@@ -493,7 +493,7 @@
 				9CD311E72412684600B50E6E /* HomeRouter.swift in Sources */,
 				9CD311E82412684600B50E6E /* HomeBuilder.swift in Sources */,
 				9CD311D62412667800B50E6E /* ErrorType.swift in Sources */,
-				9CD311ED2412684600B50E6E /* ChatRoomCell.swift in Sources */,
+				9CD311ED2412684600B50E6E /* ChatListCell.swift in Sources */,
 				9CD311F824126F2100B50E6E /* SettingInteractor.swift in Sources */,
 				9CD311EA2412684600B50E6E /* ChatListInteractor.swift in Sources */,
 				9C8D3FF9240AAAE60007E71F /* AppDelegate.swift in Sources */,

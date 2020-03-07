@@ -1,5 +1,5 @@
 //
-//  ChatRoomCell.swift
+//  ChatListCell.swift
 //  Chatting
 //
 //  Created by Soso on 05/03/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatRoomCell: UITableViewCell {
+class ChatListCell: UITableViewCell {
 
     @IBOutlet weak var viewProfile: UIView!
     

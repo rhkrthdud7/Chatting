@@ -104,7 +104,7 @@ final class ChatListViewController: UIViewController, ChatListPresentable, ChatL
         tableView.backgroundColor = .white
         tableView.separatorStyle = .none
         tableView.rowHeight = 68
-        tableView.registerReusableCell(withClass: ChatRoomCell.self, fromNib: true)
+        tableView.registerReusableCell(withClass: ChatListCell.self, fromNib: true)
         view.addSubview(tableView)
         tableView.snp.makeConstraints({
             $0.top.equalTo(viewNavigation.snp.bottom)
@@ -118,8 +118,8 @@ final class ChatListViewController: UIViewController, ChatListPresentable, ChatL
                 viewSeparator.isHidden = !isGreaterThanZero
             }).disposed(by: disposeBag)
         Observable.of(chatRoomList)
-            .bind(to: tableView.rx.items, curriedArgument: { tableView, row, element -> ChatRoomCell in
-                let cell = tableView.dequeueReusableCell(withClass: ChatRoomCell.self, for: IndexPath(row: row, section: 0))
+            .bind(to: tableView.rx.items, curriedArgument: { tableView, row, element -> ChatListCell in
+                let cell = tableView.dequeueReusableCell(withClass: ChatListCell.self, for: IndexPath(row: row, section: 0))
                 cell.configure(data: element)
                 return cell
             }).disposed(by: disposeBag)
